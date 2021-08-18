@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     LinearLayout llWifiSync;
     ImageView imv_logo;
     ImageView imv_back;
-    ImageView imv_back_ur;
     TextView txv_title;
 
     ArrayList<String> lst_generateReportId;
@@ -98,6 +97,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bindViews();
         AppConfig.getInstance().loadUserProfileData();
 
+
+
         if(AppConfig.getInstance().mLanguage.equalsIgnoreCase(AppConstt.AppLang.LANG_UR)) {
             imv_back.setBackground(getDrawable(R.drawable.ic_arrow_back_white_ar));
 
@@ -110,7 +111,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            imv_back.setVisibility(View.GONE);
 //            imv_back_ur.setVisibility(View.VISIBLE);
         }
-
 
         Log.d("OFFLINE_DB", "getAnimalList()  " + AppConfig.getInstance().mLanguage);
 
@@ -219,13 +219,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         imv_logo = findViewById(R.id.act_intro_rl_toolbar_logo);
         imv_back = findViewById(R.id.act_intro_rl_toolbar_back);
-        imv_back_ur = findViewById(R.id.act_intro_rl_toolbar_back_ur);
+
         txv_title = findViewById(R.id.act_intro_txv_title);
 
 
         imv_logo.setOnClickListener(this);
         imv_back.setOnClickListener(this);
-        imv_back_ur.setOnClickListener(this);
+       
         llWifiSync.setOnClickListener(this);
 
 
@@ -310,7 +310,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 setFirstFragment();
                 break;
             case R.id.act_intro_rl_toolbar_back:
-            case R.id.act_intro_rl_toolbar_back_ur:
+
                 onBackPressed();
                 break;
             case R.id.lay_item_btmbr_ll_wifi_sync:
@@ -383,7 +383,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case AppConstt.ToolbarState.TOOLBAR_BACK_TITLE_HIDDEN:
                 txv_title.setVisibility(View.VISIBLE);
                 imv_back.setVisibility(View.GONE);
-                imv_back_ur.setVisibility(View.GONE);
+
                 imv_logo.setVisibility(View.VISIBLE);
                 rlToolbar.setVisibility(View.VISIBLE);
                 break;
@@ -391,7 +391,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case AppConstt.ToolbarState.TOOLBAR_BACK_TITLE_VISIBLE:
                 txv_title.setVisibility(View.VISIBLE);
                 imv_back.setVisibility(View.VISIBLE);
-                imv_back_ur.setVisibility(View.VISIBLE);
+
                 imv_logo.setVisibility(View.GONE);
                 rlToolbar.setVisibility(View.VISIBLE);
                 break;
@@ -400,7 +400,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 txv_title.setVisibility(View.VISIBLE);
                 imv_back.setVisibility(View.VISIBLE);
-                imv_back_ur.setVisibility(View.VISIBLE);
+
                 imv_logo.setVisibility(View.GONE);
                 rlToolbar.setVisibility(View.VISIBLE);
                 break;
@@ -409,13 +409,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 rlToolbar.setVisibility(View.GONE);
                 txv_title.setVisibility(View.GONE);
                 imv_back.setVisibility(View.GONE);
-                imv_back_ur.setVisibility(View.GONE);
+
                 imv_logo.setVisibility(View.GONE);
                 break;
             default:
                 txv_title.setVisibility(View.VISIBLE);
                 imv_back.setVisibility(View.VISIBLE);
-                imv_back_ur.setVisibility(View.VISIBLE);
+
                 imv_logo.setVisibility(View.VISIBLE);
                 break;
 
