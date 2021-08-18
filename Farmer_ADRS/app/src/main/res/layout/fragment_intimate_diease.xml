@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@color/thm_gray_bg"
+    android:clickable="true"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!--Input panel-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/frg_varification_va_txv_txv_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:paddingTop="@dimen/textview_font_padding_top"
+                android:paddingBottom="@dimen/textview_font_padding_top"
+                android:text="@string/please_select_animal"
+                android:textAlignment="center"
+                android:textColor="@color/green_govt"
+                android:textSize="@dimen/fontsize_small"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.dd.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:sl_cornerRadius="10dp"
+                    app:sl_dx="0dp"
+                    app:sl_dy="0dp"
+                    app:sl_shadowColor="@color/thm_shadow"
+                    app:sl_shadowRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shp_rect_rounded_white_card"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingStart="26dp"
+                        android:paddingTop="15dp"
+                        android:paddingEnd="26dp"
+                        android:paddingBottom="15dp">
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/frg_home_rcv_animals"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/frg_intiamte_diesease_llLarge"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp">
+
+
+                            <ast.adrs.farmer.Utils.CircleImageView
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:background="@color/white"
+                                android:src="@drawable/ic_large" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/large_animal"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="@dimen/fontsize_mini"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <View
+                            
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height"
+                            android:background="@color/gray" />
+                        <LinearLayout
+
+                            android:id="@+id/frg_intiamte_diesease_llSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp">
+
+
+                            <ast.adrs.farmer.Utils.CircleImageView
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:background="@color/white"
+                                android:src="@drawable/ic_small" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/small_animals"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="@dimen/fontsize_mini"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <View
+                            
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height"
+                            android:background="@color/gray" />
+                        <LinearLayout
+                            android:id="@+id/frg_intiamte_diesease_llEquine"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp">
+
+
+                            <ast.adrs.farmer.Utils.CircleImageView
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:background="@color/white"
+                                android:src="@drawable/ic_equine" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/equine"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="@dimen/fontsize_mini"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <View
+                            
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height"
+                            android:background="@color/gray" />
+                        <LinearLayout
+
+                            android:id="@+id/frg_intiamte_diesease_llCamel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp">
+
+
+                            <ast.adrs.farmer.Utils.CircleImageView
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:background="@color/white"
+                                android:src="@drawable/ic_camel" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/camael"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="@dimen/fontsize_mini"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <View
+                            
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/divider_height"
+                            android:background="@color/gray" />
+                        <LinearLayout
+
+                            android:id="@+id/frg_intiamte_diesease_llPoularty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp">
+
+
+                            <ast.adrs.farmer.Utils.CircleImageView
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:background="@color/white"
+                                android:src="@drawable/ic_poultry" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/poularty"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="@dimen/fontsize_mini"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </com.dd.ShadowLayout>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@color/thm_gray_bg"
+    android:clickable="true"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!--Input panel-->
+
+
+        <LinearLayout
+
+            android:id="@+id/llFarmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.dd.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:sl_cornerRadius="10dp"
+                    app:sl_dx="0dp"
+                    app:sl_dy="0dp"
+                    app:sl_shadowColor="@color/thm_shadow"
+                    app:sl_shadowRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shp_rect_rounded_white_card"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+
+                            <RelativeLayout
+                                android:id="@+id/rleditProfile"
+                                android:layout_alignParentEnd="true"
+                                android:layout_width="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="wrap_content">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/fontsize_mini"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/thm_dark_navy"
+                                    android:padding="10dp"
+                                    android:text="@string/editProfile"/>
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_below="@id/rleditProfile"
+                                android:id="@+id/xyz"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toStartOf="@id/frg_complete_profile_imv_profile"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="start|center_vertical"
+                                        android:hint="@string/name"
+                                        android:inputType="text"
+                                        android:lines="1"
+                                        android:padding="5dp"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="@dimen/fontsize_mini"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/frg_my_profile_txv_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="start|center_vertical"
+                                        android:hint="@string/enter_name"
+                                        android:inputType="text"
+                                        android:lines="1"
+                                        android:padding="5dp"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:paddingBottom="@dimen/edttext_font_padding"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="@dimen/fontsize_mini" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium"
+                                    android:background="@null"
+                                    android:gravity="start|center_vertical"
+                                    android:hint="@string/cnic_number"
+                                    android:inputType="text"
+                                    android:lines="1"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="@dimen/fontsize_mini"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/frg_my_profile_txv_cnic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:gravity="start|center_vertical"
+                                    android:hint="@string/enter_cnic"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    android:padding="5dp"
+
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="@dimen/fontsize_mini" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:gravity="start|center_vertical"
+                                    android:hint="@string/act_intro_phonenum"
+                                    android:inputType="text"
+                                    android:lines="1"
+                                    android:padding="5dp"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="@dimen/fontsize_mini"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+                                    android:id="@+id/frg_my_profile_txv_phone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:gravity="start|center_vertical"
+                                    android:hint="@string/enter_mobile_number"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    android:padding="5dp"
+
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="@dimen/fontsize_mini" />
+
+
+                            </LinearLayout>
+
+                            <ast.adrs.farmer.Utils.CircleImageView
+                                android:id="@+id/frg_complete_profile_imv_profile"
+                                android:layout_width="100dp"
+                                android:layout_below="@id/rleditProfile"
+                                android:layout_height="100dp"
+                                android:layout_alignParentEnd="true"
+
+                                android:src="@drawable/ic_user_placeholder" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/address"
+                                android:layout_width="100dp"
+                                android:layout_height="@dimen/edttext_height_medium"
+                                android:layout_centerVertical="true"
+                                android:background="@null"
+                                android:gravity="start|center_vertical"
+                                android:lines="1"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="@dimen/edttext_font_padding"
+                                android:text="@string/Address"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="@dimen/fontsize_mini"
+                                android:textStyle="bold" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/address"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/frg_my_profile_txv_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:gravity="start|center_vertical"
+
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="@dimen/fontsize_mini" />
+
+                                <TextView
+                                    android:id="@+id/frg_my_profile_txv_tehsil"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:gravity="start|center_vertical"
+
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="@dimen/fontsize_mini" />
+
+                                <TextView
+                                    android:id="@+id/frg_my_profile_txv_district"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:gravity="start|center_vertical"
+
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="@dimen/fontsize_mini" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </com.dd.ShadowLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llfarm_wise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:clickable="false"
+
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:textSize="@dimen/fontsize_small"
+                        android:paddingEnd="5dp"
+                        android:text="@string/farm_population"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <com.dd.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:sl_cornerRadius="5dp"
+                    app:sl_dx="0dp"
+                    app:sl_dy="0dp"
+                    app:sl_shadowColor="@color/thm_shadow"
+                    app:sl_shadowRadius="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lay_contribution_header_ll_tableHead"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/button_height_xmedium"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shp_rect_rounded_top_blue_medium"
+
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+
+                            android:weightSum="100">
+
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/button_height_xmedium"
+                                android:layout_weight="50">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="start|center_vertical"
+                                    android:paddingStart="5dp"
+                                    android:text="@string/farm_name"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/fontsize_mini"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/button_height_xmedium"
+                                android:layout_weight="50">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="end|center_vertical"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/population"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/fontsize_mini"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/frg_complete_profile_rcv_populatin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shp_bottom_rounded_white_medium"
+                            android:clipToPadding="false"
+                            android:divider="@null"
+                            android:horizontalSpacing="7dp"
+                            android:numColumns="2"
+                            android:paddingBottom="10dp"
+                            android:scrollbars="none"
+                            android:verticalSpacing="7dp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </com.dd.ShadowLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/frg_my_profile_rl_done"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_xxmedium"
+                    android:layout_gravity="center"
+
+                    android:clickable="false"
+
+                    android:gravity="center"
+
+                    android:text="@string/btn_done"
+                    android:textColor="@color/green_govt"
+                    android:textColorHint="@color/green_govt"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/adptr_spnnr_itm_rlSpinner"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:gravity="start|center_vertical"
+        android:textAlignment="viewStart"
+        android:id="@+id/adptr_spnnr_itm_txt_item"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_alignParentStart="true"
+        android:background="@color/transparent"
+
+        android:textColor="@color/black"
+        android:textSize="@dimen/fontsize_mini" />
+
+
+</RelativeLayout>

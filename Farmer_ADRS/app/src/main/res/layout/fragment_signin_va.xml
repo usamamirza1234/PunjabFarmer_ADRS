@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@color/thm_gray_bg"
+    android:clickable="true"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:id="@+id/frag_sign_up_user_rl_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_sign_in_logo" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/welcome"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontsize_small"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.dd.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:sl_cornerRadius="10dp"
+                    app:sl_dx="0dp"
+                    app:sl_dy="0dp"
+                    app:sl_shadowColor="@color/thm_shadow"
+                    app:sl_shadowRadius="9dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shp_rect_rounded_top_blue_medium"
+                            android:gravity="center">
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:padding="10dp"
+                                android:paddingStart="15dp"
+                                android:text="@string/emp_particulars"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/fontsize_small"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@drawable/shp_bottom_rounded_white_medium"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/act_intro_name"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/frg_sigin_va_edt_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium"
+                                    android:background="@null"
+                                    android:cursorVisible="true"
+                                    android:hint="@string/enter_name"
+                                    android:inputType="text"
+                                    android:lines="1"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:text="For Testing Name"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/fontsize_mini" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/cnic_number"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/frg_sigin_va_edt_cnic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium"
+                                    android:background="@null"
+                                    android:cursorVisible="true"
+                                    android:hint="@string/enter_cnic"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    android:maxLength="@integer/max_length_cnic"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:text="4230125098911"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/fontsize_mini" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/act_intro_phonenum"
+
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/frg_sigin_va_edt_phone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium"
+                                    android:background="@null"
+                                    android:cursorVisible="true"
+                                    android:hint="@string/enter_mobile_number"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    android:maxLength="@integer/max_length_phone"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:text="03245143468"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/fontsize_mini" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/whatsapp_mobile"
+
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/frg_sigin_va_edt_whatsappphone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium"
+                                    android:background="@null"
+                                    android:cursorVisible="true"
+                                    android:hint="@string/enter_mobile_whatsapp"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    android:maxLength="@integer/max_length_phone"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:text="03245143468"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/fontsize_mini" />
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/act_intro_email"
+
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/frg_sigin_va_edt_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium"
+                                    android:background="@null"
+                                    android:cursorVisible="true"
+                                    android:hint="@string/act_intro_enter_email"
+                                    android:inputType="textEmailAddress"
+                                    android:lines="1"
+                                    android:paddingStart="10dp"
+
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:text="testing@gmail.com"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/fontsize_mini" />
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/frg_sigin_va_rl_dob"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/act_intro_dob"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/frg_sigin_va_edt_date_of_birth"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/edttext_height_medium"
+                                        android:layout_alignParentStart="true"
+                                        android:background="@null"
+                                        android:clickable="false"
+                                        android:gravity="center_vertical"
+                                        android:hint="01-02-2001"
+                                        android:lines="1"
+                                        android:maxLength="@integer/max_length_phone"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:paddingBottom="@dimen/edttext_font_padding"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="@dimen/fontsize_mini" />
+
+                                    <ImageView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginEnd="5dp"
+                                        android:src="@drawable/ic_calendar" />
+
+                                </RelativeLayout>
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/gender"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium">
+
+
+                                    <Spinner
+                                        android:id="@+id/frg_sigin_va_spinner_gender"
+                                        style="@style/spinner_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/edttext_height_medium"
+                                        android:gravity="start"
+                                        android:popupBackground="@color/white"
+                                        android:textAlignment="viewStart"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/frg_sigin_va_txv_gender"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/edttext_height_medium"
+                                        android:layout_alignParentStart="true"
+                                        android:background="@null"
+                                        android:clickable="false"
+                                        android:gravity="center_vertical|start"
+                                        android:hint=""
+                                        android:lines="1"
+
+                                        android:maxLength="@integer/max_length_phone"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:paddingBottom="@dimen/edttext_font_padding"
+                                        android:text=""
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="@dimen/fontsize_mini"
+                                        android:visibility="gone" />
+
+                                    <ImageView
+                                        android:layout_width="10dp"
+                                        android:layout_height="5dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginEnd="15dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/ic_dropdown" />
+                                </RelativeLayout>
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/dsignation"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium">
+
+
+                                    <Spinner
+                                        android:id="@+id/frg_sigin_va_spinner_designation"
+                                        style="@style/spinner_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/edttext_height_medium"
+                                        android:gravity="start"
+                                        android:popupBackground="@color/white"
+                                        android:textAlignment="viewStart"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/frg_sigin_va_txv_designation"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/edttext_height_medium"
+                                        android:layout_alignParentStart="true"
+                                        android:background="@null"
+                                        android:clickable="false"
+                                        android:gravity="center_vertical|start"
+                                        android:hint=""
+                                        android:lines="1"
+
+                                        android:maxLength="@integer/max_length_phone"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:paddingBottom="@dimen/edttext_font_padding"
+                                        android:text=""
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="@dimen/fontsize_mini"
+                                        android:visibility="gone" />
+
+                                    <ImageView
+                                        android:layout_width="10dp"
+                                        android:layout_height="5dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginEnd="15dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/ic_dropdown" />
+                                </RelativeLayout>
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/destrict"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium">
+
+
+                                    <Spinner
+                                        android:id="@+id/frg_sigin_va_spinner_district"
+                                        style="@style/spinner_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/edttext_height_medium"
+                                        android:gravity="start"
+                                        android:popupBackground="@color/white"
+                                        android:textAlignment="viewStart"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/frg_sigin_va_txv_district"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/edttext_height_medium"
+                                        android:layout_alignParentStart="true"
+                                        android:background="@null"
+                                        android:clickable="false"
+                                        android:gravity="center_vertical|start"
+                                        android:hint=""
+
+                                        android:lines="1"
+                                        android:maxLength="@integer/max_length_phone"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:paddingBottom="@dimen/edttext_font_padding"
+                                        android:text=""
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="@dimen/fontsize_mini" />
+
+                                    <ImageView
+                                        android:layout_width="10dp"
+                                        android:layout_height="5dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginEnd="15dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/ic_dropdown" />
+                                </RelativeLayout>
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/frg_sigin_va_ll_tehsil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/tehsil"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium">
+
+
+                                    <Spinner
+                                        android:id="@+id/frg_sigin_va_spinner_tehsil"
+                                        style="@style/spinner_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/edttext_height_medium"
+                                        android:gravity="start"
+                                        android:popupBackground="@color/white"
+                                        android:textAlignment="viewStart"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/frg_sigin_va_txv_tehsil"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/edttext_height_medium"
+                                        android:layout_alignParentStart="true"
+                                        android:background="@null"
+                                        android:clickable="false"
+                                        android:gravity="center_vertical|start"
+
+                                        android:hint=""
+                                        android:lines="1"
+                                        android:maxLength="@integer/max_length_phone"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:paddingBottom="@dimen/edttext_font_padding"
+                                        android:text=""
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="@dimen/fontsize_mini"
+                                        android:visibility="gone" />
+
+                                    <ImageView
+                                        android:layout_width="10dp"
+                                        android:layout_height="5dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginEnd="15dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/ic_dropdown" />
+                                </RelativeLayout>
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/frg_signin_rl_login"
+                                android:layout_width="match_parent"
+
+                                android:layout_marginTop="20dp"
+
+                                android:layout_marginBottom="2dp"
+                                android:layout_height="@dimen/button_height_xxmedium"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginEnd="2dp"
+                                android:layout_weight="100"
+                                android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="@string/submit"
+                                    android:textColor="@color/green_govt"
+                                    android:textSize="@dimen/fontsize_small"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </com.dd.ShadowLayout>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

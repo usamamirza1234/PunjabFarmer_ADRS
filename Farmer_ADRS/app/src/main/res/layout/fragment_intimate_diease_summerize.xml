@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/thm_gray_bg"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/frg_home_ctoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/shp_rect_boarder">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+
+                    android:padding="10dp"
+                    android:weightSum="100">
+
+
+                    <ast.adrs.farmer.Utils.CircleImageView
+                        android:id="@+id/frg_intimate_disease_summary_img_selected_animal"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_poultry" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/shp_rect_rounded_white"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/frg_intimate_disease_summary_txv_selected"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/green_govt"
+                            android:textSize="@dimen/fontsize_mini"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/frg_intimate_disease_summary_txv_selected_disease"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/green_govt"
+                            android:textSize="@dimen/fontsize_mini"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frg_home_ctoolbar"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:background="@null"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="10dp"
+
+                android:text="@string/Sign_Symptoms_Noticed"
+                android:textColor="@color/green_govt"
+                android:textSize="@dimen/fontsize_mini"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/Following_issues_are_noted"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontsize_mini"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <com.dd.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:sl_cornerRadius="18dp"
+                    app:sl_dx="0dp"
+                    app:sl_dy="0dp"
+                    app:sl_shadowColor="@color/thm_shadow"
+                    app:sl_shadowRadius="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lay_contribution_header_ll_tableHead"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shp_rect_rounded_top_blue_medium"
+
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+
+                            android:weightSum="100">
+
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="10"
+                                android:visibility="gone">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:text="N0."
+
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/fontsize_tiny" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="100">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="start|center_vertical"
+                                    android:paddingStart="10dp"
+                                    android:text="@string/Following_issues_are_noted"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/fontsize_tiny" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/frg_intimate_disease_summary_rcv_populatin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shp_bottom_rounded_white_medium"
+                            android:clipToPadding="false"
+                            android:divider="@null"
+                            android:horizontalSpacing="7dp"
+                            android:numColumns="2"
+                            android:paddingBottom="10dp"
+                            android:scrollbars="none"
+                            android:verticalSpacing="7dp"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                </com.dd.ShadowLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/frg_intimate_disease_summary_imv_aniamal"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/frg_intimate_disease_summary_rl_take_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_xxmedium"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/take_a_picture"
+                        android:textColor="@color/green_govt"
+                        android:textSize="@dimen/fontsize_mini"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/ic_camera" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="15dp"
+                    android:text="@string/salect_a_farm_where"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontsize_mini"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/frg_intimate_disease_summary_rl_choose_exisiting_farm"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_height_xxmedium"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/choose_exsisting_farm"
+                            android:textColor="@color/green_govt"
+                            android:textSize="@dimen/fontsize_mini"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/frg_intimate_disease_summary_rl_add_new_farm"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_height_xxmedium"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/add_new_farm"
+                            android:textColor="@color/green_govt"
+                            android:textSize="@dimen/fontsize_mini"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/frg_intimate_disease_summary_ll_add_new_farm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/edttext_height_medium"
+                            android:layout_gravity="center">
+
+
+                            <EditText
+                                android:id="@+id/frg_intimate_disease_summary_txv_add_farm"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/edttext_height_medium"
+                                android:layout_alignParentStart="true"
+                                android:background="@null"
+                                android:clickable="false"
+                                android:cursorVisible="true"
+                                android:gravity="center_vertical|start"
+                                android:hint="@string/please_add_farm"
+                                android:lines="1"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="@dimen/edttext_font_padding"
+                                android:text=""
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textCursorDrawable="@null"
+                                android:textSize="@dimen/fontsize_mini" />
+
+                            <RelativeLayout
+                                android:id="@+id/frg_intimate_disease_summary_rl_add_new_farm_done"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/button_height_xxmedium"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:text="@string/add_search"
+                                    android:textColor="@color/green_govt"
+                                    android:textSize="@dimen/fontsize_mini"
+                                    android:textStyle="bold" />
+
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height"
+                        android:background="@color/thm_divider1" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/frg_intimate_disease_summary_ll_choose_existing_farm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <RelativeLayout
+                            android:id="@+id/frg_spiner_farm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/edttext_height_medium"
+                            android:layout_gravity="center">
+
+
+                            <Spinner
+
+                                android:id="@+id/frg_intimate_disease_summary_spinner_gender"
+                                style="@style/spinner_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/edttext_height_medium"
+                                android:gravity="start"
+                                android:popupBackground="@color/white"
+
+                                android:textAlignment="viewStart"
+
+                                />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="5dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_dropdown" />
+
+                            <TextView
+                                android:id="@+id/frg_intimate_disease_summary_txv_gender"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/edttext_height_medium"
+                                android:layout_alignParentStart="true"
+                                android:background="@null"
+                                android:clickable="false"
+                                android:gravity="center_vertical|start"
+                                android:hint=""
+                                android:lines="1"
+                                android:maxLength="@integer/max_length_phone"
+
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="@dimen/edttext_font_padding"
+                                android:text=""
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/transparent"
+                                android:textColorHint="@color/transparent"
+                                android:textSize="@dimen/fontsize_mini"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height"
+                        android:background="@color/thm_divider1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/animal_population_on_farm"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontsize_mini"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/shp_table"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_xxmedium"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/edttext_height_medium"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="50"
+                        android:clickable="false"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="@string/total_animals"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/frg_intimate_disease_summary_edt_total_animal"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/edttext_height_medium"
+                        android:layout_weight="50"
+                        android:background="@null"
+                        android:cursorVisible="true"          android:layout_gravity="center_vertical"
+                        android:gravity="end|center_vertical"
+                        android:hint="@string/enter_sick"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="@dimen/edttext_font_padding"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/fontsize_mini" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@color/thm_divider1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height_xxmedium"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/edttext_height_medium"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="50"
+                            android:clickable="false"
+
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="5dp"
+                            android:text="@string/no_sick_animal"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/frg_intimate_disease_summary_edt_sick_animal"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/edttext_height_medium"
+                            android:layout_weight="50"
+                            android:background="@null"
+                            android:cursorVisible="true"
+                            android:gravity="end|center_vertical"
+                            android:hint="@string/enter_sick"          android:layout_gravity="center_vertical"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="@dimen/edttext_font_padding"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/fontsize_mini" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/divider_height"
+                        android:background="@color/thm_divider1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_xxmedium"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/edttext_height_medium"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="50"
+                        android:clickable="false"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="@string/no_dead_animal"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/frg_intimate_disease_summary_edt_dead_animal"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/edttext_height_medium"
+                        android:layout_weight="50"
+                        android:background="@null"
+                        android:cursorVisible="true"
+                        android:gravity="end|center_vertical"
+                        android:hint="@string/enter_sick"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="@dimen/edttext_font_padding"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/fontsize_mini" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+
+                    <RelativeLayout
+
+                        android:id="@+id/rlBack"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_height_xxmedium"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/back"
+                            android:textColor="@color/green_govt"
+                            android:textSize="@dimen/fontsize_mini"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/frg_intimate_disease_summary_rl_Submit"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_height_xxmedium"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/submit"
+                            android:textColor="@color/green_govt"
+                            android:textSize="@dimen/fontsize_mini"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

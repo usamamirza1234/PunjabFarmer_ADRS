@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/thm_gray_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@null"
+            android:lines="1"
+            android:padding="10dp"
+            android:paddingBottom="@dimen/edttext_font_padding"
+            android:text="@string/give_suggestions"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fontsize_small"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shp_rect_rounded_hollow_dark_gray2_white_mini">
+
+
+            <EditText
+                android:id="@+id/frg_contact_us_edt_subcribe"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="start"
+                android:hint="@string/please_enter_suggestion"
+                android:includeFontPadding="false"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/green_govt"
+
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/fontsize_mini"
+                android:textStyle="bold" />
+
+            <Button
+
+                android:id="@+id/frg_contact_us_txv_send"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shp_rect_rounded_green_govt_mini"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="@dimen/textview_font_padding"
+                android:paddingEnd="10dp"
+                android:paddingBottom="@dimen/textview_font_padding"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fontsize_tiny"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/edttext_font_padding"
+        android:text="@string/suggestion_history"
+        android:textColor="@color/black"
+        android:textSize="@dimen/fontsize_small"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <com.dd.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:sl_cornerRadius="18dp"
+            app:sl_dx="0dp"
+            app:sl_dy="0dp"
+            app:sl_shadowColor="@color/thm_shadow"
+            app:sl_shadowRadius="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lay_contribution_header_ll_tableHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_xmedium"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shp_rect_rounded_top_blue_medium"
+
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+
+                    android:weightSum="100">
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="30"
+                       >
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/date"
+
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/fontsize_mini" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        >
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/subject"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/fontsize_mini" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70"
+                        >
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/suggestion"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/fontsize_mini" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/frg_mesg_rcv_msges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shp_bottom_rounded_white_medium"
+                    android:clipToPadding="false"
+                    android:divider="@null"
+                    android:horizontalSpacing="7dp"
+                    android:numColumns="2"
+                    android:paddingBottom="10dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="7dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </com.dd.ShadowLayout>
+    </LinearLayout>
+</LinearLayout>

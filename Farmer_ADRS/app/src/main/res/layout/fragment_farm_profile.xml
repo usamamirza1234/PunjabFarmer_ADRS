@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@color/thm_gray_bg"
+    android:clickable="true"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!--Input panel-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/complete_farm"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontsize_small"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.dd.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:sl_cornerRadius="10dp"
+                    app:sl_dx="0dp"
+                    app:sl_dy="0dp"
+                    app:sl_shadowColor="@color/thm_shadow"
+                    app:sl_shadowRadius="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shp_rect_rounded_white_card"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="false"
+                                android:paddingStart="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="5dp"
+                                android:text="@string/farm_name"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="100">
+
+
+                                <RelativeLayout
+
+                                    android:id="@+id/rl_add_farm"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/edttext_height_medium"
+                                    android:layout_gravity="center">
+
+
+                                    <EditText
+                                        android:id="@+id/txv_add_farm"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/edttext_height_medium"
+                                        android:layout_alignParentStart="true"
+                                        android:background="@null"
+                                        android:clickable="false"
+                                        android:cursorVisible="true"
+                                        android:gravity="center_vertical|start"
+                                        android:hint="@string/please_add_farm"
+                                        android:lines="1"
+
+                                        android:paddingStart="10dp"
+
+                                        android:paddingEnd="10dp"
+                                        android:paddingBottom="@dimen/edttext_font_padding"
+                                        android:text=""
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/black"
+                                        android:textCursorDrawable="@null"
+                                        android:textSize="@dimen/fontsize_mini" />
+
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/divider_height"
+                                android:background="@color/thm_divider1" />
+
+
+                            <RelativeLayout
+                                android:id="@+id/frg_farm_profile_farmer_add_farm"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/button_height_xxmedium"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="10dp"
+
+                                android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+                                <TextView
+                                    android:id="@+id/frg_txv_add_spices"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="@string/add_farm"
+                                    android:textColor="@color/green_govt"
+                                    android:textSize="@dimen/fontsize_mini"
+                                    android:textStyle="bold" />
+
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/llSpices"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/speices"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium">
+
+
+                                    <Spinner
+                                        android:id="@+id/frg_farm_profile_spinner_spices"
+                                        style="@style/spinner_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/edttext_height_medium"
+                                        android:gravity="start"
+                                        android:popupBackground="@color/white"
+                                        android:textAlignment="viewStart"
+
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/frg_farm_profile_txv_spices"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/edttext_height_medium"
+                                        android:layout_alignParentStart="true"
+                                        android:background="@null"
+                                        android:clickable="false"
+                                        android:gravity="center_vertical|start"
+                                        android:hint=""
+                                        android:lines="1"
+
+                                        android:maxLength="@integer/max_length_phone"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:paddingBottom="@dimen/edttext_font_padding"
+                                        android:text=""
+                                        android:textAlignment="viewStart"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/black"
+                                        android:textSize="@dimen/fontsize_mini"
+                                        android:visibility="gone" />
+
+                                    <ImageView
+                                        android:layout_width="10dp"
+                                        android:layout_height="5dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginEnd="15dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/ic_dropdown" />
+
+                                </RelativeLayout>
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/number_animal"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/frg_farm_profile_farmer_edt_animals"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium"
+                                    android:background="@null"
+                                    android:cursorVisible="true"
+                                    android:hint="@string/enter_no_of_animals"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    android:maxLength="@integer/max_length_cnic"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/fontsize_mini" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/frg_farm_profile_farmer_add_spices"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/button_height_xxmedium"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="10dp"
+
+                                android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="@string/add_spice"
+                                    android:textColor="@color/green_govt"
+                                    android:textSize="@dimen/fontsize_mini"
+                                    android:textStyle="bold" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </com.dd.ShadowLayout>
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_population"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+
+                    android:clickable="false"
+                    android:padding="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/population_farm"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/fontsize_small"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.dd.ShadowLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        app:sl_cornerRadius="10dp"
+                        app:sl_dx="0dp"
+                        app:sl_dy="0dp"
+                        app:sl_shadowColor="@color/thm_shadow"
+                        app:sl_shadowRadius="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shp_rect_rounded_white_card"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <com.dd.ShadowLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                app:sl_cornerRadius="18dp"
+                                app:sl_dx="0dp"
+                                app:sl_dy="0dp"
+                                app:sl_shadowColor="@color/thm_shadow"
+                                app:sl_shadowRadius="6dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:id="@+id/lay_contribution_header_ll_tableHead"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/shp_rect_rounded_top_blue_medium"
+
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:padding="5dp"
+
+                                        android:weightSum="100">
+
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="@dimen/button_height_xmedium"
+                                            android:layout_weight="50">
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+
+                                                android:gravity="start|center_vertical"
+                                                android:paddingStart="5dp"
+                                                android:text="@string/spices"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/fontsize_tiny" />
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="50">
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:gravity="end|center_vertical"
+                                                android:paddingEnd="5dp"
+                                                android:text="@string/population"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/fontsize_tiny" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/frg_complete_profile_rcv_populatin"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/shp_bottom_rounded_white_medium"
+                                        android:clipToPadding="false"
+                                        android:divider="@null"
+                                        android:horizontalSpacing="7dp"
+                                        android:numColumns="2"
+                                        android:paddingBottom="10dp"
+                                        android:scrollbars="none"
+                                        android:verticalSpacing="7dp"
+                                        android:visibility="visible" />
+
+                                </LinearLayout>
+
+                            </com.dd.ShadowLayout>
+
+
+                        </LinearLayout>
+                    </com.dd.ShadowLayout>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/frg_farm_profile_llNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal"
+
+                android:padding="10dp"
+                android:weightSum="100">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlBack"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height_xxmedium"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/back"
+                        android:textColor="@color/green_govt"
+                        android:textSize="@dimen/fontsize_small"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/frg_farm_profile_farmer_rl_sumary"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/button_height_xxmedium"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke"
+                    android:paddingStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/next"
+                        android:textColor="@color/green_govt"
+                        android:textSize="@dimen/fontsize_small"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/frg_farm_profile_farmer_rlDone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_xxmedium"
+                android:layout_margin="15dp"
+                android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke"
+
+
+                android:padding="10dp"
+                android:paddingStart="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/done"
+                    android:textColor="@color/green_govt"
+                    android:textSize="@dimen/fontsize_small"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.dd.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:sl_cornerRadius="18dp"
+            app:sl_dx="0dp"
+            app:sl_dy="0dp"
+            app:sl_shadowColor="@color/thm_shadow"
+            app:sl_shadowRadius="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/lay_contribution_header_ll_tableHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_xmedium"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shp_rect_rounded_top_blue_medium"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="30dp"
+                        >
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="5dp"
+
+                            android:text="@string/date"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fontsize_mini"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_toEndOf="@id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="10dp"
+                     >
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/discription"
+                            android:textColor="@color/white"
+
+                            android:textSize="@dimen/fontsize_mini"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/frg_mesg_rcv_msges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shp_bottom_rounded_white_medium"
+                    android:clipToPadding="false"
+                    android:divider="@null"
+                    android:horizontalSpacing="7dp"
+                    android:numColumns="2"
+                    android:paddingBottom="10dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="7dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </com.dd.ShadowLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

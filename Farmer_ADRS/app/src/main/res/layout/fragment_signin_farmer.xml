@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@color/thm_gray_bg"
+    android:clickable="true"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!--Input panel-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:paddingBottom="5dp"
+                android:src="@drawable/ic_sign_in_logo" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/frg_sgnin_rl_switchlang"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+
+                    <TextView
+                        android:id="@+id/frg_sgnin_txv_switchlang"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+
+                        android:text="@string/act_intro_switchlang"
+                        android:textColor="@color/thm_green2"
+                        android:textSize="@dimen/fontsize_mini" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/welcome"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontsize_small"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/frg_choose_ll_when_sync"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/please_wait_while"
+                    android:textColor="@color/app_red_color"
+                    android:textSize="@dimen/fontsize_small"
+                    android:textStyle="bold" />
+
+
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/frg_choose_ll_when_not_sync"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.dd.ShadowLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:sl_cornerRadius="10dp"
+                    app:sl_dx="0dp"
+                    app:sl_dy="0dp"
+                    app:sl_shadowColor="@color/thm_shadow"
+                    app:sl_shadowRadius="9dp">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/shp_rect_rounded_top_blue_medium"
+                            android:gravity="center">
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="start"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:padding="10dp"
+                                android:paddingStart="15dp"
+                                android:text="@string/farmer_particulars"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/fontsize_small"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shp_bottom_rounded_white_medium"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/act_intro_name"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="@dimen/fontsize_small"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/frg_sigin_farmer_edt_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/edttext_height_medium"
+                                    android:background="@null"
+                                    android:cursorVisible="true"
+                                    android:hint="@string/enter_name"
+                                    android:inputType="text"
+                                    android:lines="1"
+                                    android:paddingStart="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/fontsize_small" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/act_intro_phonenum"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="@dimen/fontsize_small"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/frg_sigin_farmer_edt_number"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="@dimen/edttext_height_medium"
+                                    android:background="@null"
+                                    android:cursorVisible="true"
+                                    android:hint="@string/enter_mobile_number"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    android:maxLength="@integer/max_length_phone"
+                                    android:paddingStart="10dp"
+
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/fontsize_small" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:paddingStart="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="@string/cnic_number"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/frg_sigin_farmer_edt_cnic"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="@dimen/edttext_height_medium"
+
+                                    android:background="@null"
+                                    android:cursorVisible="true"
+                                    android:hint="@string/enter_cnic"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    android:maxLength="@integer/max_length_cnic"
+                                    android:paddingStart="10dp"
+
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="@dimen/edttext_font_padding"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/black"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="@dimen/fontsize_small" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/divider_height"
+                                    android:background="@color/thm_divider1" />
+
+                            </LinearLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/frg_signin_rl_frgtpswd"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+
+                                    android:layout_marginTop="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:paddingTop="@dimen/textview_font_padding"
+                                        android:paddingBottom="@dimen/textview_font_padding">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:textColorHint="@color/black"
+
+                                            android:textSize="@dimen/fontsize_mini" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="@color/white" />
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/frg_signin_farmer_rl_login"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/button_height_xxmedium"
+
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="@string/submit"
+                                    android:textColor="@color/green_govt"
+                                    android:textSize="@dimen/fontsize_small"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </com.dd.ShadowLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

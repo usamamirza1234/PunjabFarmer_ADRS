@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/thm_gray_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/frg_home_ctoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shp_rect_boarder">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+
+            android:padding="10dp"
+            android:weightSum="100">
+
+
+            <ast.adrs.farmer.Utils.CircleImageView
+                android:id="@+id/frg_disease_img_selected_animal"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_poultry" />
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/shp_rect_rounded_white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/frg_disease_txv_selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/green_govt"
+                    android:textSize="@dimen/fontsize_mini"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/frg_disease_txv_selected_disease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/green_govt"
+                    android:textSize="@dimen/fontsize_mini"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/txv"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frg_home_ctoolbar"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+        android:gravity="center"
+        android:lines="1"
+
+        android:text="@string/select_sign"
+        android:textColor="@color/green_govt"
+        android:textSize="@dimen/fontsize_mini"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/frg_risk_app_servy_rcv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/frg_bbtm_cntr"
+        android:layout_below="@id/txv"
+        tools:listitem="@layout/lay_risk_appietite_survey" />
+
+
+    <RelativeLayout
+        android:id="@+id/frg_bbtm_cntr"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+
+            <RelativeLayout
+
+                android:id="@+id/rlBack"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height_xxmedium"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="50"
+                android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/back"
+                    android:textColor="@color/green_govt"
+                    android:textSize="@dimen/fontsize_small"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frg_risk_app_servy_rlNext"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height_xxmedium"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="50"
+                android:background="@drawable/shp_rect_rounded_green_govt_mini_stoke">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/next"
+                    android:textColor="@color/green_govt"
+                    android:textSize="@dimen/fontsize_small"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
